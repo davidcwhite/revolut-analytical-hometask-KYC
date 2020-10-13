@@ -1,0 +1,25 @@
+{
+    "image_integrity": {
+      "result": "clear",
+      "breakdown": {
+        "supported_document": {
+          "result": "clear",
+          "properties": {}
+        },
+        "image_quality": {
+          "result": "clear",
+          "properties": {}
+        },
+        "colour_picture": {
+          "result": "clear",
+          "properties": {}
+        },
+        "conclusive_document_quality": {
+          "result": "clear",
+          "properties": {}
+        }
+      }
+    }
+  }
+      
+    
