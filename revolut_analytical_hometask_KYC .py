@@ -84,7 +84,7 @@ def plot_applicants_by_day():
     plt.show()
 
 # -------plot applications per day#-------
-plot_applicants_by_day()
+# plot_applicants_by_day()
 
 def SMA(column, period):
     return column.rolling(period).mean()
@@ -186,8 +186,6 @@ def plot_compare_corr_timeseries(variables, labels, title=''):
     plt.show()
 
 # main handler for SMA output
-
-
 def results_avg(variables, labels, title=''):
     for i in range(len(variables)):
         result[variables[i]] = result[variables[i]] == "clear"
@@ -244,8 +242,6 @@ def results_avg(variables, labels, title=''):
 #                         'IIR failure rate cause')
 
 # main handler for correlation matrix output
-
-
 def results_corr_matrix(variables, labels, title=''):
     for i in range(len(variables)):
         result[variables[i]] = result[variables[i]] == "clear"
@@ -289,8 +285,6 @@ def results_corr_matrix(variables, labels, title=''):
 #                 'Document report check analysis')
 
 # main handler for correlation time series output
-
-
 def results_corr_timeseries(variables, labels, title=''):
     for i in range(len(variables)):
         result[variables[i]] = result[variables[i]] == "clear"
@@ -330,8 +324,6 @@ def results_corr_timeseries(variables, labels, title=''):
 # doc_prop = pd.json_normalize(result['properties_doc_report'])
 
 # result.sort_values("created_at" + doc_report, inplace=True)
-
-
 properties_doc_report = pd.DataFrame(
     result['properties_doc_report'].apply(ast.literal_eval).values.tolist())
 properties_doc_report.columns = 'properties_doc_report.' + \
@@ -349,17 +341,6 @@ properties_doc_report['conclusive_document_quality_result'] = df1['conclusive_do
 
 # properties_doc_report.to_csv(r'properties_output_1.csv', index = False, header=True)
 
-# df1 = pd.DataFrame()
-# df1['created_at_doc_report'] = result["created_at" + doc_report]
-# df2 = pd.DataFrame(result['properties_doc_report'].apply(ast.literal_eval).values.tolist())
-# df1 = df1.reset_index(drop=True)
-# df1.join(df2)
-# pd.concat([df1, df2], axis=1)
-# print(df1)
-# properties_doc_report = pd.merge(df2, df1, left_index=True, right_index=False)
-# df1.to_csv(r'properties_output_1.csv', index = False, header=True)
-
-# print(df1)
 def results_avg_2(variables, labels, title=''):
     for i in range(len(variables)):
         if i > 0:
